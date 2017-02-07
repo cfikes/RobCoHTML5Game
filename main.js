@@ -144,57 +144,8 @@ if ( !localStorage.lightStatus ) {
     clear: function() {
       return false;
     },
-
-    contact: function(key) {
-      key = key || '';
-      var out = [];
-
-      switch ( key.toLowerCase() ) {
-        case 'email' :
-          window.open('mailto:andersevenrud@gmail.com');
-          break;
-        case 'github' :
-          window.open('https://github.com/andersevenrud/');
-          break;
-        case 'linkedin' :
-          window.open('http://www.linkedin.com/in/andersevenrud');
-          break;
-        case 'youtube' :
-          window.open('https://www.youtube.com/user/andersevenrud');
-          break;
-        case 'worpress' :
-          window.open('http://anderse.wordpress.com/');
-          break;
-        case 'twitter' :
-          window.open('https://twitter.com/#!/andersevenrud');
-          break;
-        case 'google+' :
-          window.open('https://profiles.google.com/101576798387217383063?rel=author');
-          break;
-
-        default :
-          if ( key.length ) {
-            out = ['Invalid key: ' + key];
-          } else {
-            out = [
-              "Contact information:\n",
-              'Name:      Anders Evenrud',
-              'Email:     andersevenrud@gmail.com',
-              'Github:    https://github.com/andersevenrud/',
-              'LinkedIn:  http://www.linkedin.com/in/andersevenrud',
-              'YouTube:   https://www.youtube.com/user/andersevenrud',
-              'Wordpress: http://anderse.wordpress.com/',
-              'Twitter:   https://twitter.com/#!/andersevenrud',
-              'Google+:   https://profiles.google.com/101576798387217383063?rel=author'
-            ];
-          }
-          break;
-      }
-
-      return out.join("\n");
-    },
  
-	hardware: function(key,action) {
+hardware: function(key,action) {
       key = key || '';
 	  action = action || '';
       var out = [];
